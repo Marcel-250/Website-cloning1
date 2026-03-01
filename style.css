@@ -335,38 +335,40 @@ nav ul li:first-child a {
     gap: 20px;
     padding: 60px 40px;
     background: #f5f5f5;
-    margin-top: -100px; /* lift cards into hero image */
     position: relative;
     z-index: 1;
 }
 
 /* CARD STYLE */
 .agency-card {
-    flex: 1 1 150px;              /* grow/shrink with minimum width */
-    max-width: 150px;
+    flex: 0 1 calc(25% - 15px);   /* 4 cards per row with gap */
+    min-width: 200px;    
+    height: 200px         /* minimum width */
     display: flex;
     flex-direction: column;       /* stack title/content/button vertically */
-    justify-content: space-between; /* push link to bottom when text is short */
+    justify-content: flex-start;
     background: #fff;
     padding: 20px;
-    margin: 0;                    /* spacing handled by .cards gap */
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    min-height: 240px;
+    text-align: center;
 }
 
-.agency-card {
-    font-size: 10px;
-    margin-bottom: 10px;
-}
-
-.agency-card p {
-    flex-grow: 1;                 /* allow paragraph to take available space */
+.agency-logo-space {
+    width: 100%;
+    height: 120px;
+    background-color: #e8e8e8;
+    border: 2px dashed #999;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 15px;
-    line-height: 1.4;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;        /* limit to ~4 lines */
-    -webkit-box-orient: vertical;
+}
+
+.agency-card h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    color: #000;
 }
