@@ -1,11 +1,372 @@
 .head {
     color:aliceblue;
     background-color: blue;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Times New Roman;
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.mineduc-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    font-family: Times New Roman;
+    white-space: nowrap;
+}
+
+h1 {
+    margin: 0;
+    color: aliceblue;
+}
+
+.headings {
+    color:black;
+    background-color: rgb(235, 233, 233);
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.language-selector {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Times New Roman;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.language-selector select {
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    font-family: Times New Roman;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.language-selector .divider {
+    color: #999;
+    margin: 0 5px;
+}
+
+.language-selector .portal-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+/* ensure navigation links sit on the same line */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;          /* makes all list items line up horizontally */
+    justify-content: center;  /* center the navigation links */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin-right: 0;
+    margin-left: 0;     /* medium space between links */
+    padding: 0;
+}
+
+nav ul a {
+    text-transform: uppercase;  /* make links appear in capital letters */
+    color: #999;
+    display: inline-block;  /* keep links inline within each list item */
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+nav ul a:hover {
+    color: #0099ff;
+    font-weight: bold;
+}
+
+nav ul li:first-child a {
+    color: #0099ff;
+    font-weight: bold;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    max-width: 80px;
+}
+
+.main-content {
+    background-image: url('https://www.mineduc.gov.rw/fileadmin/_processed_/f/c/csm_HOME_HEADER_7f03bd1b78.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* allow image to move with page */
+    min-height: 650px; /* make image taller so cards appear within it */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 60px;
+}
+
+.main-content-title {
+    color: white;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1;
+}
+
+.main-content h4 {
+    color: rgb(254, 246, 246);
+    font-size: 28px;
+    font-weight: 300;
+    text-align: left;
+    text-shadow: 2x 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    margin: 10px 0 0 0;
+    line-height: 1.2;
+}
+
+/* cards section styles */
+.cards {
+    display: flex;
+    flex-wrap: nowrap;            /* keep cards on single row */
+    justify-content: center;      /* center the row of cards */
+    gap: 30px;
+    padding: 60px 40px;
+    margin-top: -100px; /* lift cards into hero image */
+    position: relative;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+}
+
+/* CARD STYLE */
+.card {
+    flex: 1 1 auto;               /* equal width cards that shrink to fit */
+    display: flex;
+    flex-direction: column;       /* stack title/content/button vertically */
+    justify-content: space-between; /* push link to bottom when text is short */
+    background-color: none;
+    padding: 0;                   /* remove padding for full-width image */
+    margin: 0;                    /* spacing handled by .cards gap */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+.card h3,
+.card h6 {
+    padding: 15px 15px 5px 15px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #000;
+    text-transform: uppercase;
+}
+
+
+.card h6 {
+    font-size: 14px;
+}
+
+.card-icon {
+    font-size: 8px;
+    margin-bottom: 8px;
+    padding: 15px 15px 0 15px;
+}
+
+.card p {
+    flex-grow: 1;                 /* allow paragraph to take available space */
+    margin: 0;
+    padding: 0 15px 10px 15px;
+    line-height: 1.5;
+    font-size: 13px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;        /* limit to ~3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.card a {
+    display: block;
+    padding: 0 15px 15px 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.img {
+    width: auto;
+    length: auto;
+}
+
+.info-cards {
+   display: flex;
+    flex-wrap: wrap;              /* allow cards on multiple rows */
+    justify-content: center;      /* center the row of cards */
+    gap: 20px;
+    padding: 60px 40px;
+    background: #f5f5f5;
+    margin-top: -100px; /* lift cards into hero image */
+    position: relative;
+    z-index: 1;   
+}
+
+/* footer styles */
+.footer {
+    background-color: #004a7c; /* dark blue */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-info {
+    flex: 1 1 300px;
+}
+.footer-info h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.contact-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.contact-list .icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+.contact-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.social-icons {
+    margin: 20px 0;
+}
+.social-icons .si {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 8px;
+    background: #006bb3;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer-map {
+    flex: 1 1 300px;
+}
+.footer-map iframe {
+    border: 0;
+    border-radius: 4px;
+}
+.footer .copyright {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.agency-cards {
+    display: flex;
+    flex-wrap: wrap;              /* allow cards on multiple rows */
+    justify-content: center;      /* center the row of cards */
+    gap: 20px;
+    padding: 60px 40px;
+    background: #f5f5f5;
+    margin-top: -100px; /* lift cards into hero image */
+    position: relative;
+    z-index: 1;
+}
+
+/* CARD STYLE */
+.agency-card {
+    flex: 1 1 150px;              /* grow/shrink with minimum width */
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;       /* stack title/content/button vertically */
+    justify-content: space-between; /* push link to bottom when text is short */
+    background: #fff;
+    padding: 20px;
+    margin: 0;                    /* spacing handled by .cards gap */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    min-height: 240px;
+}
+
+.agency-card {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.agency-card p {
+    flex-grow: 1;                 /* allow paragraph to take available space */
+    margin-bottom: 15px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;        /* limit to ~4 lines */
+    -webkit-box-orient: vertical;
 }
